@@ -1,0 +1,55 @@
+/* Main Function */
+
+float readAmbientLight();
+	action	= Read ambient light level from BH1750F sensor
+	returns	= Float : Ambient light level from BH1750F sensor
+	info	= Time taken to return is based on the sensor resolution, sensitivity and
+			  power save setting that have been set prior to taking a reading
+
+
+/* Resolution Functions */
+
+void setResolution(uint8_t resolution);
+   @param 1	= Possible values are :  1, 2, 3
+	action	= Set a resolution for the sensor to take readings at
+	returns	= Void
+	info	= 1 = LOW
+			  2 = HIGH
+			  3 = HIGH_2
+
+uint8_t getResolution();
+	action	= Get the resolution currently in use
+	returns	= uint8_t : Resolution number
+	info	= Resolution values are : 1, 2, 3
+
+	
+/* Sensitivity Functions */
+
+void setSensitivity(uint8_t sensitivity);
+   @param 1	= Possible values are a range between 31 -> 254
+	action	= Set a sensitivity for the sensor to take readings at
+	returns	= Void
+	info	= Changing this higher than the default (69) will increase the time a reading
+			  will take
+
+uint8_t getSensitivity();
+	action	= Get the Sensitivity currently in use
+	returns	= uint8_t : Sensitivity number
+	info	= Sensitivity values are a range between 32 -> 254
+	
+	
+/* Power Save Functions */
+
+void setPowerSaveMode(uint8_t powerSave);
+   @param 1 = Possible values are : 1=Enabled, 0=Disabled
+	action	= Turn power save mode ON or OFF
+	returns	= Void
+	info	= power save mode will turn the device ON and OFF for every reading so the
+			  sensor uses less current when not in use. Disabled will leave the sensor
+			  on and allows for continuous polling at high speed without using delays
+
+uint8_t getPowerSaveMode();
+	action	= Get the power save mode currently in use
+	returns	= uint8_t : Power save mode
+	info	= 1 = Enabled
+			  2 = Disabled

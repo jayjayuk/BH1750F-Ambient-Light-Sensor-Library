@@ -1,0 +1,18 @@
+#######################################
+# Syntax Coloring Map For BH1750F
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+BH1750F				KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+readAmbientLight	KEYWORD2
+setResolution		KEYWORD2
+getResolution		KEYWORD2
+setSensitivity		KEYWORD2
+getSensitivity		KEYWORD2
+setPowerSaveMode	KEYWORD2
+getPowerSaveMode	KEYWORD2
